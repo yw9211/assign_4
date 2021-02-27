@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Joe’s Hotdog Stand</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <style>
+      * {
+        background-color: #AC8E60;
+        width: 100%;
+      }
+      table {
+        margin: 100px auto;
+        border: 5px solid #fff;
+        width: 25%;
+        background-color: #E9DAC4;
+      }
+      
+      td {
+        padding: 15px;
+        font-family: 'Abel', sans-serif;
+        font-size: 18px;
+        width: 20%;
+        background-color: #E9DAC4;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <script language="javascript">
+    hotdogs = parseInt(prompt ("How many orders of HOTDOGS would you like?","0"));
+    fries = parseInt(prompt ("How many orders of FRIES would you like?","0"));
+    sodas = parseInt(prompt ("How many orders of SODAS would you like?","0"));
+    
+    subtotal = (hotdogs * 3.25) + (fries * 2.00) + (sodas * 1.50);
+    
+    document.write("<table>");
+
+    document.write("<tr><td>" + hotdogs + "X Hotdogs</td><td>$" + (hotdogs * 3.25).toFixed(2) + "</td></tr><tr><td>" + fries + "X Fries</td><td>$" + (fries * 2.00).toFixed(2) + "</td></tr><tr><td>" + sodas + "X Sodas</td><td>$" + (sodas * 1.50).toFixed(2) + "</td></tr><tr><td>Subtotal:</td><td>$" + subtotal.toFixed(2) + "</td></tr>");
+    
+    if (subtotal >= 20)
+    {
+      discount = subtotal * 0.1;
+      document.write("<tr><td>Disount:</td><td>-$" + discount.toFixed(2) + "</td></tr>");
+      subtotal *= 0.9;
+    }
+    else 
+    {
+      document.write("<tr><td>Disount:</td><td>(not applicable)</td></tr>");
+    }
+    
+    tax = subtotal * 0.0625;
+    document.write("<tr><td>Tax:</td><td>$" + tax.toFixed(2) + "</td></tr><tr><td>Total:</td><td>$" + (subtotal * 1.0625).toFixed(2) + "</td></tr>");
+  
+    </script>
+  </body>
+</html>
