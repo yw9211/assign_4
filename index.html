@@ -8,10 +8,19 @@
     <style>
       * {
         background-color: #AC8E60;
+        font-family: 'Abel', sans-serif;
         width: 100%;
       }
+      
+      h1 {
+        font-size: 50px;
+        text-align: center;
+        padding-top: 50px;
+        color: #fff;
+      }
+      
       table {
-        margin: 100px auto;
+        margin: 40px auto;
         border: 5px solid #fff;
         width: 25%;
         background-color: #E9DAC4;
@@ -19,7 +28,6 @@
       
       td {
         padding: 15px;
-        font-family: 'Abel', sans-serif;
         font-size: 18px;
         width: 20%;
         background-color: #E9DAC4;
@@ -32,6 +40,8 @@
     hotdogs = parseInt(prompt ("How many orders of HOTDOGS would you like?","0"));
     fries = parseInt(prompt ("How many orders of FRIES would you like?","0"));
     sodas = parseInt(prompt ("How many orders of SODAS would you like?","0"));
+    
+    document.write("<h1>Your Order</h1>");
     
     subtotal = (hotdogs * 3.25) + (fries * 2.00) + (sodas * 1.50);
     
